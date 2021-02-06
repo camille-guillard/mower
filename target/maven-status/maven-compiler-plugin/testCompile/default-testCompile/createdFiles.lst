@@ -1,0 +1,9 @@
+project\behavior\IDirectionTest.class
+project\behavior\impl\SouthDirectionTest.class
+project\TestSuite.class
+project\world\WorldMapTest.class
+project\behavior\enums\CommandEnumTest.class
+project\behavior\impl\WestDirectionTest.class
+project\behavior\impl\EastDirectionTest.class
+project\behavior\impl\NorthDirectionTest.class
+project\pawn\PawnTest.class
