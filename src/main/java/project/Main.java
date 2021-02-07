@@ -3,7 +3,7 @@ package project;
 import org.apache.log4j.BasicConfigurator;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
-import project.world.WorldMap;
+import project.world.IWorldMap;
 import project.world.WorldMapFactory;
 
 public class Main {
@@ -19,7 +19,8 @@ public class Main {
     public static void main(String ...args) {
 
         try {
-            WorldMap worldMap = WorldMapFactory.getGrassWorldMap(path);
+
+            IWorldMap worldMap = WorldMapFactory.getGrassWorldMap(path);
 
             logger.info(worldMap.toString());
             worldMap.run();

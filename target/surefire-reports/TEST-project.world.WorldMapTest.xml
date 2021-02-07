@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="14" failures="0" name="project.world.WorldMapTest" time="0.003" errors="0" skipped="0">
+<testsuite tests="16" failures="0" name="project.world.WorldMapTest" time="0.001" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_201\jre\bin"/>
@@ -66,16 +66,18 @@
   </properties>
   <testcase classname="project.world.WorldMapTest" name="testEastDirectionMoveOOB" time="0"/>
   <testcase classname="project.world.WorldMapTest" name="testSouthDirectionMove" time="0"/>
-  <testcase classname="project.world.WorldMapTest" name="testEastDirectionMove" time="0.001"/>
+  <testcase classname="project.world.WorldMapTest" name="testEastDirectionMove" time="0"/>
   <testcase classname="project.world.WorldMapTest" name="testEastDirectionMoveBlocked" time="0"/>
   <testcase classname="project.world.WorldMapTest" name="testSouthDirectionMoveOOB" time="0"/>
+  <testcase classname="project.world.WorldMapTest" name="testMow" time="0"/>
+  <testcase classname="project.world.WorldMapTest" name="testMow2" time="0"/>
   <testcase classname="project.world.WorldMapTest" name="testWestDirectionMove" time="0"/>
-  <testcase classname="project.world.WorldMapTest" name="testInitWorldMap" time="0.001"/>
+  <testcase classname="project.world.WorldMapTest" name="testInitWorldMap" time="0"/>
   <testcase classname="project.world.WorldMapTest" name="testNorthDirectionMoveBlocked" time="0"/>
   <testcase classname="project.world.WorldMapTest" name="testNorthDirectionMoveOOB" time="0"/>
   <testcase classname="project.world.WorldMapTest" name="testWestDirectionMoveOOB" time="0"/>
   <testcase classname="project.world.WorldMapTest" name="testNorthDirectionMove" time="0"/>
-  <testcase classname="project.world.WorldMapTest" name="testInitPawns" time="0"/>
-  <testcase classname="project.world.WorldMapTest" name="testSouthDirectionMoveBlocked" time="0.001"/>
+  <testcase classname="project.world.WorldMapTest" name="testInitPawns" time="0.001"/>
+  <testcase classname="project.world.WorldMapTest" name="testSouthDirectionMoveBlocked" time="0"/>
   <testcase classname="project.world.WorldMapTest" name="testWestDirectionMoveBlocked" time="0"/>
 </testsuite>

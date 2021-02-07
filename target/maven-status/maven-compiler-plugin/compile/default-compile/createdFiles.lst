@@ -1,6 +1,8 @@
 project\pawn\Pawn$1.class
 project\behavior\impl\WestDirection.class
+project\world\box\IBox.class
 project\world\box\GrassBox.class
+project\pawn\IPawn.class
 project\world\GrassWorldMap.class
 project\pawn\mower\Mower.class
 project\pawn\Position.class
@@ -8,12 +10,14 @@ project\world\WorldMapFactory.class
 project\behavior\impl\NorthDirection.class
 project\world\WorldMap.class
 project\pawn\Pawn.class
+project\world\IWorldMap.class
 project\behavior\IDirection.class
 project\behavior\impl\EastDirection.class
 project\pawn\mower\Mowable.class
 project\behavior\impl\SouthDirection.class
 project\world\box\Box.class
 project\Main.class
+project\pawn\IPosition.class
 project\behavior\enums\CommandEnum.class
 project\pawn\Movable.class
 project\pawn\Actionable.class

@@ -2,7 +2,7 @@ package project.world.box;
 
 import org.junit.Test;
 import project.behavior.impl.SouthDirection;
-import project.pawn.Pawn;
+import project.pawn.IPawn;
 import project.pawn.mower.Mower;
 
 import static org.junit.Assert.*;
@@ -27,7 +27,7 @@ public class GrassBoxTest {
         int x = 5;
         int y = 6;
         GrassBox box = new GrassBox(x, y);
-        Pawn pawn = new Mower("M0", null, box, new SouthDirection(), "G");
+        IPawn pawn = new Mower("M0", null, box, new SouthDirection(), "G");
 
         box.setPawn(pawn);
 
@@ -49,7 +49,7 @@ public class GrassBoxTest {
         // Test 1
         assertEquals("||", box.toString());
 
-        Pawn pawn = new Mower(name, null, box, new SouthDirection(), "G");
+        IPawn pawn = new Mower(name, null, box, new SouthDirection(), "G");
         box.setPawn(pawn);
 
         // Test 2

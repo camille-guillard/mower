@@ -2,6 +2,7 @@ package project.behavior.impl;
 
 import org.junit.Test;
 import project.behavior.IDirection;
+import project.pawn.IPosition;
 import project.pawn.Position;
 
 import static org.junit.Assert.assertEquals;
@@ -10,8 +11,8 @@ public class WestDirectionTest {
 
     @Test
     public void testMovingForward(){
-        Position position = new Position(1, 0);
-        Position newPosition = new WestDirection().movingForward(position);
+        IPosition position = new Position(1, 0);
+        IPosition newPosition = new WestDirection().movingForward(position);
 
         assertEquals(position.getX() - 1, newPosition.getX().intValue());
         assertEquals(position.getY(), newPosition.getY());

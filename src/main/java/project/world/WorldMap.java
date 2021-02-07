@@ -2,23 +2,24 @@ package project.world;
 
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
-import project.pawn.Pawn;
-import project.pawn.Position;
+import project.pawn.IPawn;
+import project.pawn.IPosition;
 import project.world.box.Box;
+import project.world.box.IBox;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class WorldMap {
+public class WorldMap implements IWorldMap {
 
      private static final Logger logger = LogManager.getLogger(WorldMap.class);
 
-     protected Box[][] grid;
-     List<Pawn> pawns = new ArrayList<>();
+     protected IBox[][] grid;
+     List<IPawn> pawns = new ArrayList<>();
 
      protected WorldMap() { }
 
-     protected void initGrid(int x, int y) {
+     public void init(int x, int y) {
           this.grid = new Box[x + 1][y + 1];
           for(int i = 0; i <= x; i++) {
                for(int j = 0; j <= y; j++) {
@@ -27,29 +28,29 @@ public class WorldMap {
           }
      }
 
-     public Box[][] getGrid() {
+     protected IBox[][] getGrid() {
           return grid;
      }
 
-     public Box getBox(int x, int y) throws ArrayIndexOutOfBoundsException {
+     public IBox getBox(int x, int y) throws ArrayIndexOutOfBoundsException {
           return this.grid[x][y];
      }
 
      public void run() {
-          for (Pawn pawn: pawns) {
+          for (IPawn pawn: pawns) {
                logger.info("start - " + pawn.toString());
                pawn.run();
                logger.info("end - " + pawn.toString()+ "\n");
           }
      }
 
-     public boolean move(Pawn pawn) {
+     public boolean move(IPawn pawn) {
           boolean result = false;
-          Position newPosition;
+          IPosition newPosition;
 
           try {
                newPosition = pawn.getDirection().movingForward(pawn.getBox().getPosition());
-               Box newBox = getBox(newPosition.getX(), newPosition.getY());
+               IBox newBox = getBox(newPosition.getX(), newPosition.getY());
 
                if (newBox.isEmpty()) {
                     pawn.setBox(newBox);
@@ -63,7 +64,7 @@ public class WorldMap {
           return result;
      }
 
-     public void addPawn(Pawn pawn) {
+     public void addPawn(IPawn pawn) {
           this.pawns.add(pawn);
      }
 

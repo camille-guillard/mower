@@ -14,7 +14,7 @@ public class BoxTest {
     public void testInitBox(){
         int x = 5;
         int y = 6;
-        Box box = new Box(x, y);
+        IBox box = new Box(x, y);
 
         assertEquals(x, box.getPosition().getX().intValue());
         assertEquals(y, box.getPosition().getY().intValue());
@@ -26,7 +26,7 @@ public class BoxTest {
     public void testSetPawn(){
         int x = 5;
         int y = 6;
-        Box box = new Box(x, y);
+        IBox box = new Box(x, y);
         Pawn pawn = new Mower("M0", null, box, new SouthDirection(), "A");
 
         box.setPawn(pawn);

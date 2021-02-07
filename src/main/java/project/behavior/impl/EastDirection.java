@@ -1,11 +1,12 @@
 package project.behavior.impl;
 
 import project.behavior.IDirection;
+import project.pawn.IPosition;
 import project.pawn.Position;
 
 public class EastDirection implements IDirection {
 
-    public Position movingForward(Position p) {
+    public IPosition movingForward(IPosition p) {
         return new Position(p.getX() + 1, p.getY());
     }
 

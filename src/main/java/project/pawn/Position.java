@@ -1,6 +1,6 @@
 package project.pawn;
 
-public class Position {
+public class Position implements IPosition {
     private Integer x;
     private Integer y;
 

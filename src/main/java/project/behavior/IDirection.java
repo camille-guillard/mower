@@ -4,12 +4,12 @@ import project.behavior.impl.EastDirection;
 import project.behavior.impl.NorthDirection;
 import project.behavior.impl.SouthDirection;
 import project.behavior.impl.WestDirection;
-import project.pawn.Position;
+import project.pawn.IPosition;
 
 public interface IDirection {
 
     /** Avance d'une case */
-    Position movingForward(Position p);
+    IPosition movingForward(IPosition p);
 
     /** Se tourne à 90 degr vers la droite */
     IDirection turnRight();

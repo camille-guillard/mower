@@ -1,7 +1,7 @@
 package project.pawn.mower;
 
-import project.world.box.Box;
+import project.world.box.IBox;
 
 public interface Mowable {
-    void mow(Box box);
+    void mow(IBox box);
 }

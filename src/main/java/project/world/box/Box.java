@@ -1,13 +1,14 @@
 package project.world.box;
 
-import project.pawn.Pawn;
+import project.pawn.IPawn;
+import project.pawn.IPosition;
 import project.pawn.Position;
 
 
-public class Box {
+public class Box implements IBox {
 
-    protected Position position;
-    protected Pawn pawn = null;
+    protected IPosition position;
+    protected IPawn pawn = null;
 
     public Box(int x, int y) {
         this.position = new Position(x, y);
@@ -17,11 +18,11 @@ public class Box {
         this.position = position;
     }
 
-    public Position getPosition() {
+    public IPosition getPosition() {
         return position;
     }
 
-    public void setPawn(Pawn pawn) {
+    public void setPawn(IPawn pawn) {
         this.pawn = pawn;
     }
 
@@ -29,7 +30,7 @@ public class Box {
         return pawn == null;
     }
 
-    public Pawn getPawn() {
+    public IPawn getPawn() {
         return pawn;
     }
 

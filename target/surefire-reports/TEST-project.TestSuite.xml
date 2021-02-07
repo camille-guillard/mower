@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="49" failures="0" name="project.TestSuite" time="0.012" errors="0" skipped="0">
+<testsuite tests="51" failures="0" name="project.TestSuite" time="0.008" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_201\jre\bin"/>
@@ -64,19 +64,21 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase classname="project.world.WorldMapTest" name="testEastDirectionMoveOOB" time="0.005"/>
+  <testcase classname="project.world.WorldMapTest" name="testEastDirectionMoveOOB" time="0.003"/>
   <testcase classname="project.world.WorldMapTest" name="testSouthDirectionMove" time="0"/>
   <testcase classname="project.world.WorldMapTest" name="testEastDirectionMove" time="0"/>
   <testcase classname="project.world.WorldMapTest" name="testEastDirectionMoveBlocked" time="0"/>
-  <testcase classname="project.world.WorldMapTest" name="testSouthDirectionMoveOOB" time="0.001"/>
+  <testcase classname="project.world.WorldMapTest" name="testSouthDirectionMoveOOB" time="0"/>
+  <testcase classname="project.world.WorldMapTest" name="testMow" time="0"/>
+  <testcase classname="project.world.WorldMapTest" name="testMow2" time="0.001"/>
   <testcase classname="project.world.WorldMapTest" name="testWestDirectionMove" time="0"/>
-  <testcase classname="project.world.WorldMapTest" name="testInitWorldMap" time="0.001"/>
-  <testcase classname="project.world.WorldMapTest" name="testNorthDirectionMoveBlocked" time="0.004"/>
-  <testcase classname="project.world.WorldMapTest" name="testNorthDirectionMoveOOB" time="0"/>
+  <testcase classname="project.world.WorldMapTest" name="testInitWorldMap" time="0"/>
+  <testcase classname="project.world.WorldMapTest" name="testNorthDirectionMoveBlocked" time="0"/>
+  <testcase classname="project.world.WorldMapTest" name="testNorthDirectionMoveOOB" time="0.001"/>
   <testcase classname="project.world.WorldMapTest" name="testWestDirectionMoveOOB" time="0"/>
   <testcase classname="project.world.WorldMapTest" name="testNorthDirectionMove" time="0"/>
   <testcase classname="project.world.WorldMapTest" name="testInitPawns" time="0"/>
-  <testcase classname="project.world.WorldMapTest" name="testSouthDirectionMoveBlocked" time="0"/>
+  <testcase classname="project.world.WorldMapTest" name="testSouthDirectionMoveBlocked" time="0.001"/>
   <testcase classname="project.world.WorldMapTest" name="testWestDirectionMoveBlocked" time="0"/>
   <testcase classname="project.pawn.PawnTest" name="testWestTurnLeft" time="0"/>
   <testcase classname="project.pawn.PawnTest" name="testNorthTurnLeft" time="0"/>
@@ -89,11 +91,11 @@
   <testcase classname="project.pawn.PawnTest" name="testEastTurnRight" time="0"/>
   <testcase classname="project.behavior.enums.CommandEnumTest" name="testGetEnumByCommandA" time="0"/>
   <testcase classname="project.behavior.enums.CommandEnumTest" name="testGetEnumByCommandD" time="0"/>
-  <testcase classname="project.behavior.enums.CommandEnumTest" name="testGetEnumByCommandG" time="0"/>
+  <testcase classname="project.behavior.enums.CommandEnumTest" name="testGetEnumByCommandG" time="0.001"/>
   <testcase classname="project.behavior.IDirectionTest" name="testGetNullDirection" time="0"/>
   <testcase classname="project.behavior.IDirectionTest" name="testGetSouthDirection" time="0"/>
   <testcase classname="project.behavior.IDirectionTest" name="testGetWestDirection" time="0"/>
-  <testcase classname="project.behavior.IDirectionTest" name="testGetNorthDirection" time="0"/>
+  <testcase classname="project.behavior.IDirectionTest" name="testGetNorthDirection" time="0.001"/>
   <testcase classname="project.behavior.IDirectionTest" name="testGetEastDirection" time="0"/>
   <testcase classname="project.behavior.impl.EastDirectionTest" name="testMovingForward" time="0"/>
   <testcase classname="project.behavior.impl.EastDirectionTest" name="testTurnRight" time="0"/>
@@ -109,7 +111,7 @@
   <testcase classname="project.behavior.impl.SouthDirectionTest" name="testTurnLeft" time="0"/>
   <testcase classname="project.pawn.PositionTest" name="testInitPosition" time="0"/>
   <testcase classname="project.world.box.BoxTest" name="testInitBox" time="0"/>
-  <testcase classname="project.world.box.BoxTest" name="testSetPawn" time="0.001"/>
+  <testcase classname="project.world.box.BoxTest" name="testSetPawn" time="0"/>
   <testcase classname="project.world.box.GrassBoxTest" name="testToString" time="0"/>
   <testcase classname="project.world.box.GrassBoxTest" name="testInitBox" time="0"/>
   <testcase classname="project.world.box.GrassBoxTest" name="testSetPawn" time="0"/>

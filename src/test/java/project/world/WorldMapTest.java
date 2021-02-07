@@ -6,7 +6,7 @@ import project.behavior.impl.EastDirection;
 import project.behavior.impl.NorthDirection;
 import project.behavior.impl.SouthDirection;
 import project.behavior.impl.WestDirection;
-import project.pawn.Pawn;
+import project.pawn.IPawn;
 import project.pawn.mower.Mower;
 import project.world.box.GrassBox;
 
@@ -26,7 +26,7 @@ public class WorldMapTest {
         int mapY = 55;
 
         WorldMap worldMap = new WorldMap();
-        worldMap.initGrid(mapX, mapY);
+        worldMap.init(mapX, mapY);
 
         assertEquals(worldMap.getGrid().length, mapX + 1);
         assertEquals((worldMap.getGrid()[0]).length, mapY + 1);
@@ -40,9 +40,9 @@ public class WorldMapTest {
         int pawnX = 0;
         int pawnY = 0;
 
-        WorldMap worldMap = new WorldMap();
-        worldMap.initGrid(mapX, mapY);
-        Pawn pawn = new Mower("M0", worldMap, worldMap.getBox(pawnX, pawnY), new NorthDirection(), "");
+        IWorldMap worldMap = new WorldMap();
+        worldMap.init(mapX, mapY);
+        IPawn pawn = new Mower("M0", worldMap, worldMap.getBox(pawnX, pawnY), new NorthDirection(), "");
         worldMap.addPawn(pawn);
         worldMap.run();
 
@@ -58,9 +58,9 @@ public class WorldMapTest {
         int pawnX = 0;
         int pawnY = 0;
 
-        WorldMap worldMap = new WorldMap();
-        worldMap.initGrid(mapX, mapY);
-        Pawn pawn = new Mower("M0", worldMap, worldMap.getBox(pawnX, pawnY), new NorthDirection(), "A");
+        IWorldMap worldMap = new WorldMap();
+        worldMap.init(mapX, mapY);
+        IPawn pawn = new Mower("M0", worldMap, worldMap.getBox(pawnX, pawnY), new NorthDirection(), "A");
         worldMap.addPawn(pawn);
         worldMap.run();
 
@@ -76,9 +76,9 @@ public class WorldMapTest {
         int pawnX = 0;
         int pawnY = 1;
 
-        WorldMap worldMap = new WorldMap();
-        worldMap.initGrid(mapX, mapY);
-        Pawn pawn = new Mower("M0", worldMap, worldMap.getBox(pawnX, pawnY), new SouthDirection(), "A");
+        IWorldMap worldMap = new WorldMap();
+        worldMap.init(mapX, mapY);
+        IPawn pawn = new Mower("M0", worldMap, worldMap.getBox(pawnX, pawnY), new SouthDirection(), "A");
         worldMap.addPawn(pawn);
         worldMap.run();
 
@@ -94,9 +94,9 @@ public class WorldMapTest {
         int pawnX = 0;
         int pawnY = 0;
 
-        WorldMap worldMap = new WorldMap();
-        worldMap.initGrid(mapX, mapY);
-        Pawn pawn = new Mower("M0", worldMap, worldMap.getBox(pawnX, pawnY), new EastDirection(), "A");
+        IWorldMap worldMap = new WorldMap();
+        worldMap.init(mapX, mapY);
+        IPawn pawn = new Mower("M0", worldMap, worldMap.getBox(pawnX, pawnY), new EastDirection(), "A");
         worldMap.addPawn(pawn);
         worldMap.run();
 
@@ -112,9 +112,9 @@ public class WorldMapTest {
         int pawnX = 1;
         int pawnY = 0;
 
-        WorldMap worldMap = new WorldMap();
-        worldMap.initGrid(mapX, mapY);
-        Pawn pawn = new Mower("M0", worldMap, worldMap.getBox(pawnX, pawnY), new WestDirection(), "A");
+        IWorldMap worldMap = new WorldMap();
+        worldMap.init(mapX, mapY);
+        IPawn pawn = new Mower("M0", worldMap, worldMap.getBox(pawnX, pawnY), new WestDirection(), "A");
         worldMap.addPawn(pawn);
         worldMap.run();
 
@@ -130,9 +130,9 @@ public class WorldMapTest {
         int pawnX = 0;
         int pawnY = 0;
 
-        WorldMap worldMap = new WorldMap();
-        worldMap.initGrid(mapX, mapY);
-        Pawn pawn = new Mower("M0", worldMap, worldMap.getBox(pawnX, pawnY), new NorthDirection(), "A");
+        IWorldMap worldMap = new WorldMap();
+        worldMap.init(mapX, mapY);
+        IPawn pawn = new Mower("M0", worldMap, worldMap.getBox(pawnX, pawnY), new NorthDirection(), "A");
         worldMap.addPawn(pawn);
         worldMap.run();
 
@@ -148,9 +148,9 @@ public class WorldMapTest {
         int pawnX = 0;
         int pawnY = 0;
 
-        WorldMap worldMap = new WorldMap();
-        worldMap.initGrid(mapX, mapY);
-        Pawn pawn = new Mower("M0", worldMap, worldMap.getBox(pawnX, pawnY), new SouthDirection(), "A");
+        IWorldMap worldMap = new WorldMap();
+        worldMap.init(mapX, mapY);
+        IPawn pawn = new Mower("M0", worldMap, worldMap.getBox(pawnX, pawnY), new SouthDirection(), "A");
         worldMap.addPawn(pawn);
         worldMap.run();
 
@@ -166,9 +166,9 @@ public class WorldMapTest {
         int pawnX = 0;
         int pawnY = 0;
 
-        WorldMap worldMap = new WorldMap();
-        worldMap.initGrid(mapX, mapY);
-        Pawn pawn = new Mower("M0", worldMap, worldMap.getBox(pawnX, pawnY), new EastDirection(), "A");
+        IWorldMap worldMap = new WorldMap();
+        worldMap.init(mapX, mapY);
+        IPawn pawn = new Mower("M0", worldMap, worldMap.getBox(pawnX, pawnY), new EastDirection(), "A");
         worldMap.addPawn(pawn);
         worldMap.run();
 
@@ -184,9 +184,9 @@ public class WorldMapTest {
         int pawnX = 0;
         int pawnY = 0;
 
-        WorldMap worldMap = new WorldMap();
-        worldMap.initGrid(mapX, mapY);
-        Pawn pawn = new Mower("M0", worldMap, worldMap.getBox(pawnX, pawnY), new WestDirection(), "A");
+        IWorldMap worldMap = new WorldMap();
+        worldMap.init(mapX, mapY);
+        IPawn pawn = new Mower("M0", worldMap, worldMap.getBox(pawnX, pawnY), new WestDirection(), "A");
         worldMap.addPawn(pawn);
         worldMap.run();
 
@@ -202,13 +202,13 @@ public class WorldMapTest {
         int pawnX = 0;
         int pawnY = 0;
 
-        WorldMap worldMap = new WorldMap();
-        worldMap.initGrid(mapX, mapY);
+        IWorldMap worldMap = new WorldMap();
+        worldMap.init(mapX, mapY);
 
-        Pawn pawn0 = new Mower("M0", worldMap, worldMap.getBox(pawnX, pawnY), new NorthDirection(), "A");
+        IPawn pawn0 = new Mower("M0", worldMap, worldMap.getBox(pawnX, pawnY), new NorthDirection(), "A");
         worldMap.addPawn(pawn0);
 
-        Pawn pawn1 = new Mower("M1", worldMap, worldMap.getBox(pawnX, pawnY + 1), new NorthDirection(), "");
+        IPawn pawn1 = new Mower("M1", worldMap, worldMap.getBox(pawnX, pawnY + 1), new NorthDirection(), "");
         worldMap.addPawn(pawn1);
 
         worldMap.run();
@@ -227,13 +227,13 @@ public class WorldMapTest {
         int pawnX = 0;
         int pawnY = 1;
 
-        WorldMap worldMap = new WorldMap();
-        worldMap.initGrid(mapX, mapY);
+        IWorldMap worldMap = new WorldMap();
+        worldMap.init(mapX, mapY);
 
-        Pawn pawn0 = new Mower("M0", worldMap, worldMap.getBox(pawnX, pawnY), new SouthDirection(), "A");
+        IPawn pawn0 = new Mower("M0", worldMap, worldMap.getBox(pawnX, pawnY), new SouthDirection(), "A");
         worldMap.addPawn(pawn0);
 
-        Pawn pawn1 = new Mower("M1", worldMap, worldMap.getBox(pawnX, pawnY - 1), new NorthDirection(), "");
+        IPawn pawn1 = new Mower("M1", worldMap, worldMap.getBox(pawnX, pawnY - 1), new NorthDirection(), "");
         worldMap.addPawn(pawn1);
 
         worldMap.run();
@@ -252,13 +252,13 @@ public class WorldMapTest {
         int pawnX = 0;
         int pawnY = 0;
 
-        WorldMap worldMap = new WorldMap();
-        worldMap.initGrid(mapX, mapY);
+        IWorldMap worldMap = new WorldMap();
+        worldMap.init(mapX, mapY);
 
-        Pawn pawn0 = new Mower("M0", worldMap, worldMap.getBox(pawnX, pawnY), new EastDirection(), "A");
+        IPawn pawn0 = new Mower("M0", worldMap, worldMap.getBox(pawnX, pawnY), new EastDirection(), "A");
         worldMap.addPawn(pawn0);
 
-        Pawn pawn1 = new Mower("M1", worldMap, worldMap.getBox(pawnX + 1, pawnY), new NorthDirection(), "");
+        IPawn pawn1 = new Mower("M1", worldMap, worldMap.getBox(pawnX + 1, pawnY), new NorthDirection(), "");
         worldMap.addPawn(pawn1);
 
         worldMap.run();
@@ -277,13 +277,13 @@ public class WorldMapTest {
         int pawnX = 1;
         int pawnY = 0;
 
-        WorldMap worldMap = new WorldMap();
-        worldMap.initGrid(mapX, mapY);
+        IWorldMap worldMap = new WorldMap();
+        worldMap.init(mapX, mapY);
 
-        Pawn pawn0 = new Mower("M0", worldMap, worldMap.getBox(pawnX, pawnY), new WestDirection(), "A");
+        IPawn pawn0 = new Mower("M0", worldMap, worldMap.getBox(pawnX, pawnY), new WestDirection(), "A");
         worldMap.addPawn(pawn0);
 
-        Pawn pawn1 = new Mower("M1", worldMap, worldMap.getBox(pawnX - 1, pawnY), new NorthDirection(), "");
+        IPawn pawn1 = new Mower("M1", worldMap, worldMap.getBox(pawnX - 1, pawnY), new NorthDirection(), "");
         worldMap.addPawn(pawn1);
 
         worldMap.run();
@@ -302,9 +302,9 @@ public class WorldMapTest {
         int pawnX = 0;
         int pawnY = 0;
 
-        GrassWorldMap worldMap = new GrassWorldMap();
-        worldMap.initGrid(mapX, mapY);
-        Pawn pawn = new Mower("M0", worldMap, worldMap.getBox(pawnX, pawnY), new NorthDirection(), "G");
+        IWorldMap worldMap = new GrassWorldMap();
+        worldMap.init(mapX, mapY);
+        IPawn pawn = new Mower("M0", worldMap, worldMap.getBox(pawnX, pawnY), new NorthDirection(), "G");
         worldMap.addPawn(pawn);
         worldMap.run();
 
@@ -320,9 +320,9 @@ public class WorldMapTest {
         int pawnX = 0;
         int pawnY = 0;
 
-        GrassWorldMap worldMap = new GrassWorldMap();
-        worldMap.initGrid(mapX, mapY);
-        Pawn pawn = new Mower("M0", worldMap, worldMap.getBox(pawnX, pawnY), new NorthDirection(), "A");
+        IWorldMap worldMap = new GrassWorldMap();
+        worldMap.init(mapX, mapY);
+        IPawn pawn = new Mower("M0", worldMap, worldMap.getBox(pawnX, pawnY), new NorthDirection(), "A");
         worldMap.addPawn(pawn);
         worldMap.run();
 

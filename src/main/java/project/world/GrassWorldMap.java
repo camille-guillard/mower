@@ -8,7 +8,7 @@ public class GrassWorldMap extends WorldMap {
 
      protected GrassWorldMap() { }
 
-     protected void initGrid(int x, int y) {
+     public void init(int x, int y) {
           this.grid = new Box[x + 1][y + 1];
           for(int i = 0; i <= x; i++) {
                for(int j = 0; j <= y; j++) {

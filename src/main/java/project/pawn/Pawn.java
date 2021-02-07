@@ -2,21 +2,21 @@ package project.pawn;
 
 import project.behavior.IDirection;
 import project.behavior.enums.CommandEnum;
-import project.world.box.Box;
-import project.world.WorldMap;
+import project.world.IWorldMap;
+import project.world.box.IBox;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public abstract class Pawn implements Movable, Actionable, Runnable {
+public abstract class Pawn implements IPawn {
 
     protected String name;
-    protected WorldMap worldMap;
-    protected Box box;
+    protected IWorldMap worldMap;
+    protected IBox box;
     protected IDirection direction;
     protected List<CommandEnum> commands;
 
-    public Pawn(String name, WorldMap worldMap, Box box, IDirection direction, List<CommandEnum> commands) {
+    public Pawn(String name, IWorldMap worldMap, IBox box, IDirection direction, List<CommandEnum> commands) {
         this.name = name;
         this.worldMap = worldMap;
         this.box = box;
@@ -24,7 +24,7 @@ public abstract class Pawn implements Movable, Actionable, Runnable {
         this.commands = commands;
     }
 
-    public Pawn(String name, WorldMap worldMap, Box box, IDirection direction, String stringCommands) {
+    public Pawn(String name, IWorldMap worldMap, IBox box, IDirection direction, String stringCommands) {
         this.name = name;
         this.worldMap = worldMap;
         this.box = box;
@@ -79,7 +79,7 @@ public abstract class Pawn implements Movable, Actionable, Runnable {
         this.direction = this.direction.turnLeft();
     }
 
-    public void setBox(Box box) {
+    public void setBox(IBox box) {
         this.box.setPawn(null);
         this.box = box;
         this.box.setPawn(this);
@@ -89,7 +89,7 @@ public abstract class Pawn implements Movable, Actionable, Runnable {
         return name;
     }
 
-    public Box getBox() {
+    public IBox getBox() {
         return box;
     }
 

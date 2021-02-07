@@ -4,7 +4,7 @@ import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 import project.Main;
 import project.behavior.IDirection;
-import project.pawn.Pawn;
+import project.pawn.IPawn;
 import project.pawn.mower.Mower;
 
 import java.io.*;
@@ -17,16 +17,16 @@ public class WorldMapFactory {
     private static final String SEPARATOR = " ";
     private static int numero = 0;
 
-    public static WorldMap getDefaultWorldMap(String path) {
+    public static IWorldMap getDefaultWorldMap(String path) {
         return initWorldMap(path, WorldMap::new);
     }
 
-    public static WorldMap getGrassWorldMap(String path) {
+    public static IWorldMap getGrassWorldMap(String path) {
         return initWorldMap(path, GrassWorldMap::new);
     }
 
-    private static WorldMap initWorldMap(String path, Supplier<? extends WorldMap> worldMapSupplier) {
-        WorldMap worldMap = null;
+    private static IWorldMap initWorldMap(String path, Supplier<? extends WorldMap> worldMapSupplier) {
+        IWorldMap worldMap = null;
         try{
             InputStream flux=new FileInputStream(path);
             InputStreamReader lecture=new InputStreamReader(flux);
@@ -39,7 +39,7 @@ public class WorldMapFactory {
             int y = Integer.parseInt(params[1]);
 
             worldMap = worldMapSupplier.get();
-            worldMap.initGrid(x, y);
+            worldMap.init(x, y);
 
             while ((ligne = buff.readLine()) != null) {
                 params = ligne.split(SEPARATOR);
@@ -50,7 +50,7 @@ public class WorldMapFactory {
                 IDirection direction = IDirection.getDirection(params[2].charAt(0));
                 String commands = buff.readLine();
 
-                Pawn mower = new Mower(name, worldMap, worldMap.getBox(x, y), direction, commands);
+                IPawn mower = new Mower(name, worldMap, worldMap.getBox(x, y), direction, commands);
                 worldMap.addPawn(mower);
             }
 
